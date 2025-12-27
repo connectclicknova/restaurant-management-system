@@ -18,23 +18,13 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
   const location = useLocation()
   
   const menuItems = [
-    { 
-      section: "Main",
-      items: [
-        { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
-        { path: '/tables', icon: Table2, label: 'Tables' },
-        { path: '/menu', icon: UtensilsCrossed, label: 'Menu' },
-        { path: '/billing', icon: Receipt, label: 'Billing' }
-      ]
-    },
-    {
-      section: "Management",
-      items: [
-        { path: '/staff', icon: Users, label: 'Staff' },
-        { path: '/payroll', icon: DollarSign, label: 'Payroll' },
-        { path: '/investment', icon: Wallet, label: 'Investment' }
-      ]
-    }
+    { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
+    { path: '/billing', icon: Receipt, label: 'Billing' },
+    { path: '/menu', icon: UtensilsCrossed, label: 'Menu' },
+    { path: '/tables', icon: Table2, label: 'Tables' },
+    { path: '/investment', icon: Wallet, label: 'Investment' },
+    { path: '/payroll', icon: DollarSign, label: 'Payroll' },
+    { path: '/staff', icon: Users, label: 'Staff' }
   ]
   
   return (
@@ -53,23 +43,18 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       </div>
       
       <nav className="sidebar-nav">
-        {menuItems.map((section, idx) => (
-          <div key={idx} className="nav-section">
-            <div className="nav-section-title">{section.section}</div>
-            <ul className="nav-list">
-              {section.items.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
-                >
-                  <item.icon className="nav-icon" size={20} />
-                  <span className="nav-text">{item.label}</span>
-                </Link>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <ul className="nav-list p-0">
+          {menuItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
+            >
+              <item.icon className="nav-icon" size={20} />
+              <span className="nav-text">{item.label}</span>
+            </Link>
+          ))}
+        </ul>
       </nav>
       
       <div className="sidebar-footer">
