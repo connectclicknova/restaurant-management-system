@@ -31,3 +31,35 @@ h1, h2, h3, h4, h5, h6 {
 input, button, select, textarea {
   font-family: inherit;
 }
+
+/* Toast Customization */
+.Toastify__toast {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Toastify__toast--success {
+  background-color: #2ecc71;
+}
+
+.Toastify__toast--error {
+  background-color: #ec2b25;
+}
+
+.Toastify__toast--warning {
+  background-color: #f39c12;
+}
+
+.Toastify__toast--info {
+  background-color: #3498db;
+}
+
+.Toastify__close-button {
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}

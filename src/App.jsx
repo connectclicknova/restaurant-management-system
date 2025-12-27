@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Dashboard from './Pages/Dashboard/Dashboard'
@@ -34,6 +35,19 @@ const App = () => {
             </Routes>
           </main>
         </div>
+        
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </div>
     </Router>
   )
