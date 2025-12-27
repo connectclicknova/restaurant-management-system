@@ -1,0 +1,124 @@
+.payroll-page {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background-color: var(--bg-light);
+  border-color: var(--primary-color);
+}
+
+.payroll-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.payroll-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.payroll-table {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.employee-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.bonus {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.deduction {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.total-amount {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.date {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+}
+
+.action-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .payroll-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .payroll-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .payroll-table {
+    overflow-x: scroll;
+  }
+}

@@ -1,0 +1,100 @@
+.billing-page {
+  width: 100%;
+}
+
+.billing-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-info h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.stat-info p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.billing-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.billing-table {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.bill-id {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.status-badge.paid {
+  background-color: #2ecc7115;
+  color: #2ecc71;
+}
+
+.status-badge.pending {
+  background-color: #f39c1215;
+  color: #f39c12;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .billing-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .billing-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .billing-table {
+    overflow-x: scroll;
+  }
+}
